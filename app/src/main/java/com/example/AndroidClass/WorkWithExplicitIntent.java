@@ -8,38 +8,50 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 
 import java.net.URI;
 
 public class WorkWithExplicitIntent extends AppCompatActivity {
 
 
-    Button btnDial;
     String strPhoneNumber;
     EditText EdtPhoneNumber;
+    TextView txtRegister,txtProfile,txtDial;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_work_with_explicit_intent);
 
-        btnDial=findViewById(R.id.BtnDial);
+        txtRegister=findViewById(R.id.txtRegister);
+        txtProfile=findViewById(R.id.txtProfile);
+        txtDial=findViewById(R.id.txtdial);
 
-        btnDial.setOnClickListener(new View.OnClickListener() {
+
+
+
+        txtDial.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
-
-                EdtPhoneNumber=findViewById(R.id.EdtPhoneNumber);
-                strPhoneNumber=EdtPhoneNumber.getText().toString();
-                Uri u=Uri.parse("tel:" + strPhoneNumber);
-                Intent intent=new Intent(Intent.ACTION_DIAL,u);
-                startActivity(intent);
-
-
+                startActivity(new Intent(WorkWithExplicitIntent.this,ExplicitIntentDial.class));
             }
         });
 
+        txtProfile.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(WorkWithExplicitIntent.this,ProfileActivity.class));
+            }
+        });
+
+        txtRegister.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i=new Intent(getApplicationContext(),RegisterActivity.class);
+                startActivity(i);
+            }
+        });
 
     }
 

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RegisterActivity"
+    android:orientation="vertical">
+
+
+    <EditText
+        android:id="@+id/EdtPFName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="نام"
+        android:inputType="text"
+        android:textDirection="rtl"/>
+    <EditText
+        android:id="@+id/EdtPLName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="نام خانوادگی"
+        android:inputType="text"
+        android:textDirection="rtl"/>
+    <EditText
+        android:id="@+id/EdtPEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="ایمیل"
+        android:inputType="textEmailAddress"
+        android:textDirection="rtl"/>
+    <EditText
+        android:id="@+id/EdtPMobile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="شماره همراه"
+        android:inputType="number"
+        android:maxLength="10"
+        android:textDirection="rtl"/>
+    <Button
+        android:id="@+id/BtnPreview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="پیش نمایش"/>
+    <Button
+        android:id="@+id/BtnBack"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="بازگشت"/>
+
+</LinearLayout>
